@@ -1,0 +1,1 @@
+ head=insert(head,25);

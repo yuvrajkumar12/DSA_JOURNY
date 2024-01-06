@@ -1,0 +1,1 @@
+ Node *newNode=head->next;
