@@ -12,10 +12,12 @@ struct MyStack{
     }
     void push(int x)
     {
+        if(top==cap-1) cout<<"Stack is Full"<<endl;
         top++;
        arr[top]=x;
     }
     int pop(){
+        if(top== -1) cout<<"Stack is Empty "<<endl;
         int res=arr[top];
         top--;
         return res;
@@ -38,11 +40,11 @@ int main(){
     MyStack s(5);
     s.push(2);
     s.push(3);
-    cout<<"pop of the item "<<s.pop()<<endl;
     s.push(27);
-    cout<<"Peek of the value "<<s.peek()<<endl;
     s.push(10);
+    cout<<s.pop()<<endl;
     cout<<s.size()<<endl;
+    cout<<s.peek()<<endl;
     cout<<s.isEmpty()<<endl;
     return 0;
 }
