@@ -5,21 +5,21 @@ struct  Mystack{
     vector<int>v1;
     void push(int v)
     {
-        v1.push_back(v);
+        v1.push_back(v);//Add the item of Stack
     }
     int pop()
     {
-        int res=v1.back();
+        int res=v1.back();//print the first item of the stack
         v1.pop_back();
         return res;
     }
     int size()
     {
-        return v1.size();
+        return v1.size();// print size of the array
     }
     bool isEmpty()
     {
-        return v1.empty();
+        return v1.empty();// check the condition of true or false return 0 or 1
     }
     int peek()
     {
