@@ -62,5 +62,4 @@ int main()
     cout << "Queue Rear : " << (a.rear)->data<<endl;
     a.printQueue();
     return 0;
-
 }
