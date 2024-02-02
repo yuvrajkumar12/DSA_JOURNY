@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<queue>//include queue header file
+#include<climits> // Include the header file for INT_MIN
 using namespace std;
 struct node{
     int key;
@@ -12,8 +13,9 @@ struct node{
         left=right=NULL;
     }
 };
-void printlevel(node *root)//Level order traversal of a tree is breadth first traversal of binary tree.
+void MaximumSize(node *root)//using Queue
 {
+    int Max1=INT_MIN;
     if(root==NULL) return;
     queue<node *>q;
     q.push(root);
@@ -21,12 +23,22 @@ void printlevel(node *root)//Level order traversal of a tree is breadth first tr
     {
         node *curr=q.front();
         q.pop();
-        cout<<curr->key<<" ";
+        Max1=max(Max1,curr->key);
         if(curr->left!=NULL)
             q.push(curr->left);
         if(curr->right!=NULL)
             q.push(curr->right);
 
+    }
+    cout<<Max1<<endl;
+}
+int Maxsize2(node *root)
+{
+    if(root==NULL)
+        return INT_MIN;
+    else
+    {
+        return max(root->key, max(Maxsize2(root->left), Maxsize2(root->right)));
     }
 }
 int main()
@@ -37,6 +49,8 @@ int main()
     root->left->left = new node(80);
     root->right->right = new node(70);
     root->right->left = new node(50);
-    printlevel(root);
+    cout<<"using queue: ";
+    MaximumSize(root);
+    cout<<"Maximum Size using recursion: "<<Maxsize2(root)<<endl;
     return 0;
 }
