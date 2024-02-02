@@ -8,7 +8,7 @@ struct node{
     {
         key=k;
         left=right=NULL;
-    }1
+    }
 };
 void preorder(node *root)
 {
