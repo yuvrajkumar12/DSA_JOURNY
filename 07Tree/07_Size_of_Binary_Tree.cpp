@@ -13,7 +13,7 @@ int getsize(node *root)
 {
     if(root==NULL)
         return 0;
-    return 1+(getsize(root->left)+ getsize(root->right));//Using Recursing 
+    return 1+(getsize(root->left)+ getsize(root->right));//Using Recursion
 }
 int main()
 {
