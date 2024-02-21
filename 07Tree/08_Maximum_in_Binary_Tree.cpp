@@ -18,7 +18,7 @@ void MaximumSize(node *root)//using Queue
     int Max1=INT_MIN;
     if(root==NULL) return;
     queue<node *>q;
-    q.push(root);
+    q.push(root);//pus the value queue
     while(!q.empty())
     {
         node *curr=q.front();
