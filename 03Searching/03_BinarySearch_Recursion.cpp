@@ -33,6 +33,5 @@ int main(){
     else{
         cout<<"Target is Not found: "<<res;
     }
-    
     return 0;
 }
