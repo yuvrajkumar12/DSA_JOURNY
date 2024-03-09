@@ -26,7 +26,7 @@ node *insertBinarytree(node* root, int data){
     return root;
 
 }
-void print(node* root){//Level order traversal
+void print(node* root){//Level order traversal 
     queue<node *>q;
     q.push(root);
     q.push(NULL);
