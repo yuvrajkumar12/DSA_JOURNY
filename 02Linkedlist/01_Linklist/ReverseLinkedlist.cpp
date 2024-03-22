@@ -47,6 +47,17 @@ Node *revList(Node *head){
     }
     return head;
 }
+Node *revers1(Node *head){
+    Node *curr=head;
+    Node *prev=NULL;
+    while(curr!=NULL){
+        Node *temp=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=temp;
+    }
+    return prev;
+}
 int main() {
     Node* head = nullptr;
     int n;
@@ -58,7 +69,11 @@ int main() {
     }
     cout << "Original List: ";
     printlist(head);
+    cout<<"Reverse2: ";
+    head=revers1(head);
+    printlist(head);
     head = revList(head);
     cout << "Reversed List: ";
     printlist(head);
+   
 }
