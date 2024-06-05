@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include<sstream>
 using namespace std;
 int Binarysearch(vector<int>& arr,int n,int target){
     int low=0;
@@ -19,16 +20,17 @@ int Binarysearch(vector<int>& arr,int n,int target){
     return -1;
 };
 int main(){
+    string line;
+    getline(cin, line);
+    istringstream iss(line);
     vector<int>arr;
-    int n,target;
-    cout<<"Enter Size of array: ";
-    cin>>n;
-    for(int i=0;i<n;i++){
-        int element;
-        cin>>element;
-        arr.push_back(element);
+    int s1;
+    while (iss >> s1) {
+        arr.push_back(s1);
     }
+    int n=arr.size();
     cout<<"Enter your Target: ";
+    int target;
     cin>>target;
     int res=Binarysearch(arr,n,target);
     if(res!=-1){

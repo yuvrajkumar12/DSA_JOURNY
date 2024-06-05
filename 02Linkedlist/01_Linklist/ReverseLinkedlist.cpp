@@ -36,7 +36,7 @@ void printlist(Node* head) {
     }
     cout << endl;
 }
-Node *revList(Node *head){
+Node *revList(Node *head){//using array
     vector<int> arr;
     for(Node *curr=head;curr!=NULL;curr=curr->next){
         arr.push_back(curr->data);
@@ -47,7 +47,7 @@ Node *revList(Node *head){
     }
     return head;
 }
-Node *revers1(Node *head){
+Node *revers1(Node *head){//using Linked List
     Node *curr=head;
     Node *prev=NULL;
     while(curr!=NULL){

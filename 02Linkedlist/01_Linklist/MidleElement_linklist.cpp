@@ -26,7 +26,7 @@ Node* insert(Node* head, int y)
         curr->next=new_node;
     }
     return head;
-}
+}   
 void printlist(Node* head)
 {
     Node* curr=head;
@@ -86,5 +86,4 @@ int main()
     printlist(head);
     midle(head);
     midle2(head);
-
 }

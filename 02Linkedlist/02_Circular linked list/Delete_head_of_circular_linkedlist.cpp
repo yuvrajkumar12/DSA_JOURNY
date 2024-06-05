@@ -87,4 +87,5 @@ int main()
     cout<<"After delet head of linked list  ";
     printlist2(head);
     return 0;
+
 }

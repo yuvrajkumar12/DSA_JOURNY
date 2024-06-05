@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
-void buble_sort(int arr[],int n){//time complicity O(n^2)
+//This algorithem in not suitable for large data set and arage and worth case time complicity is quick high
+void buble_sort(int arr[],int n){  //time complicity O(n^2)
     for(int i=0;i<n-1;i++){
         for(int j=0;j<n-i-1;j++){
             if(arr[j]>arr[j+1]){

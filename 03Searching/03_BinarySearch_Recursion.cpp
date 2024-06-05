@@ -1,37 +1,66 @@
 #include <iostream>
 #include <vector>
+#include<sstream>
 using namespace std;
-int linearsearch(vector<int>& arr,int low,int high,int target)
+int Rbinarysearch(vector<int>& arr,int low,int high,int target)
 {
     if(low>high) 
         return -1;
     int mid=low+(high-low)/2;
     if(arr[mid]==target)
-        return mid;
+        return mid; 
     else if(arr[mid]>target)
-        return linearsearch(arr,low,mid-1,target);
+        return Rbinarysearch(arr,low,mid-1,target);
     else
-        return linearsearch(arr,mid+1,high,target);
+        return Rbinarysearch(arr,mid+1,high,target);
 
 };
-int main(){
-    vector<int>arr;
-    int n,target;
-    cout<<"Enter Size of array: ";
-    cin>>n;
-    for(int i=0;i<n;i++){
-        int element;
-        cin>>element;
-        arr.push_back(element);
+int binaryse(vector<int>&arr,int low,int high,int target){{
+    while(low<=high){
+        int mid=low+(high-low)/2;
+        if(arr[mid]==target){
+            return mid;
+        }
+        else if(arr[mid] < target){
+            low=mid+1;
+        }
+        else{
+            high=mid-1;
+        }
     }
+    return -1;
+};
+
+}
+int main(){
+    cout<<"Enter your array: ";
+    string line;
+    getline(cin,line);
+    istringstream iss(line);
+    vector<int>arr;
+    int num;
+    while(iss>>num){
+        arr.push_back(num);
+    }
+    int n=arr.size();
     cout<<"Enter your Target: ";
+    int target;
     cin>>target;
-    int res=linearsearch(arr,0,n-1,target);
+    //using recursion
+    int res=Rbinarysearch(arr,0,n-1,target);
     if(res!=-1){
-        cout<<"Target is fount at index of: "<<res;
+        cout<<"Target is found at index of: "<<res<<endl;
     }
     else{
-        cout<<"Target is Not found: "<<res;
+        cout<<"Target is Not found: "<<res<<endl;
+    }
+    //using simple method
+    int res1=binaryse(arr,0,n-1,target);
+    if(res1!=-1){
+        cout<<"Target is found at index of: "<<res1;
+    }
+    else{
+        cout<<"Target is Not found: "<<res1;
     }
     return 0;
 }
