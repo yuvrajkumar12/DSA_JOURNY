@@ -11,7 +11,7 @@ void sortchar(int a[],char b[],int n){
     }
     sort(pa,pa+n);
     for(int i=0;i<n;i++){
-        cout<<"("<<pa[i].first<<","<<pa[i].second<<" )";
+        cout<<"("<<pa[i].first<<" , "<<pa[i].second<<")"<<endl;
     }
 }
 int main(){
