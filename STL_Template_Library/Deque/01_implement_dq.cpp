@@ -11,20 +11,3 @@ int main(){
     cout<<dq.front()<<" "<<dq.back();
     return 0;
 }
-// #include <sstream>
-// #include <vector>
-// using namespace std;
-// int main(){
-//     string line;
-//     getline(cin, line);
-//     istringstream iss(line);
-//     vector<int> arr;
-//     int num;
-//     while (iss >> num) {
-//         arr.push_back(num);
-//     }
-//     int s=arr.size();
-    
-
-//     return 0;
-// }
