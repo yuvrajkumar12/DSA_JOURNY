@@ -18,7 +18,7 @@ void stock_span(vector<int>&s) //time complicity O(n)
     }
     cout<<endl;
 }
-void span(vector<int>&s){
+void span(vector<int>&s){//time complicity o(n^2)
     for(int i=0;i<s.size();i++){
         int s1=1;
         for(int j=i-1;j>=0;j--){
