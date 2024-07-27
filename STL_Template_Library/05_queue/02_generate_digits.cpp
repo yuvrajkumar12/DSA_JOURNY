@@ -1,6 +1,4 @@
-#include<iostream>
-#include<queue>
-#include<string>
+#include <bits/stdc++.h>
 using namespace std;
 void generate(int n)
 {
