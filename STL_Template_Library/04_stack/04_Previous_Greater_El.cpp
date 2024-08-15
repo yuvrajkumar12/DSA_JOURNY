@@ -23,19 +23,18 @@ void Previous_Greater_Element(vector<int>&arr){//time complicity O(n);
 
 vector<int>next_greater_element(vector<int>&arr){
     int n = arr.size();
-    vector<int> v(n);
     stack<int> s;
-    s.push(arr[n - 1]);
-    v[n - 1] = -1;
-    for (int i = n - 2; i >= 0; i--) {
+
+    for (int i = n - 1; i >= 0; i--) {
         while (!s.empty() && s.top() <= arr[i]) {
             s.pop();
         }
         int dq = s.empty() ? -1 : s.top();
-        v[i] = dq;
         s.push(arr[i]);
+        arr[i] = dq; // Modify the input array itself to store the result
     }
-    return v;
+
+    return arr;
 }
 //using for loop
 void previougreater(vector<int>&arr){ //time complicity o(n^2)

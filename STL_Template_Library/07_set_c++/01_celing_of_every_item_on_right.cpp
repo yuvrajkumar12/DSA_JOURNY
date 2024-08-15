@@ -19,7 +19,7 @@ void wceling1(vector<int>&nums){//time complicity is o(n^2)
     }
     cout<<endl;
 }
-void priorityceling(vector<int>&nums){//using set time complicity is O(n)
+void priorityceling(vector<int>&nums){//using set time complicity is O(nlogn)
     set<int>s;
     int n=nums.size();
     int res[n];
