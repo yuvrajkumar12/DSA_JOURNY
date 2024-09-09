@@ -17,6 +17,7 @@ void  merge(int arr1[],int low,int mid, int high){
     }
     int i=0,j=0,k=low;
     //store the value in temp array arr1
+
     while(i<n1&&j<n2){
         if(left[i]<=right[j]){
             arr1[k]=left[i];
@@ -39,6 +40,7 @@ void  merge(int arr1[],int low,int mid, int high){
 
 }
 //merge function Algorithm
+
 void mergeSort(int arr1[], int low, int high) {
     if (low < high) {
         int mid = low + (high - low) / 2;
@@ -53,6 +55,7 @@ int main(){
     istringstream iss(line);
     vector<int>arr;
     int num;
+
     //Set input in one line
     while (iss >> num) {
         arr.push_back(num);
@@ -61,11 +64,14 @@ int main(){
     if (size == 0) {
         return 0;
     }
+
     //create a new array arr1 to store the value
     int arr1[size];
     for (int i = 0; i < size; i++) {
         arr1[i] = arr[i];
     }
+
+
     //call merge function
     mergeSort(arr1, 0, size - 1);
     for (int i = 0; i < size; i++) {

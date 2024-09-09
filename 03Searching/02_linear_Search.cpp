@@ -26,7 +26,8 @@ int main(){
     int n=arr.size();
     int res=Linearsearch(arr,n,target,0);
     if(res!=-1){
-        cout<<"Target is fount at index of: "<<res;
+        cout<<"Target is found
+         at index of: "<<res;
     }
     else{
         cout<<"Target is Not found: "<<res;
