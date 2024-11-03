@@ -13,7 +13,7 @@ vector<int> move_end_zero(vector<int>&arr){//Time cp= O(n^2)
     }
     return arr;
 }
-
+cout<<endl;
 // O(n)
 void Zero(vector<int>&arr){
     int n=arr.size();
