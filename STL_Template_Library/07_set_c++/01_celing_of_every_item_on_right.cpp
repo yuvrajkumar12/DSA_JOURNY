@@ -7,6 +7,7 @@ void wceling1(vector<int>&nums){//time complicity is o(n^2)
         for(int j=i+1;j<s;j++){
             if(nums[j]>=nums[i]){
                 diff=min(diff,nums[j]-nums[i]);
+                cout<<diff<<endl;
             }
         }
         if(diff==INT_MAX){

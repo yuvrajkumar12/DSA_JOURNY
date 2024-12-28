@@ -1,20 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
-void Naiv_Alg(string s,int n, string s1,int n1){
-    for(int i=0;i<=n-n1;){
-        int j=0;
-        for(j=0;j<n1;j++){
-            if(s[i+j]!=s1[j]){
-                break;
-            }
-        }
-        //pattern was found
-        if(j==n1){
-            cout<<i<<" "; //starting index match 
-            i+=n1;
-        }else{
-            i++;// move thee next character in the string
-        }
+void patSearchinng(string &txt,int n,string &pat, int m){
+    for(int i=0;i<=(n-m);i++){
+        int j;
+        for(j=0;j<m;j++)
+        if(pat[j]!=txt[i+j])
+        break;
+        
+        if(j==m)
+        cout<<i<<" "<<endl;
+    }
+}
+
+void Inprove_naive_pattern_searching(string &txt, int n,  string &pat, int m){
+    for(int i=0;i<=(n-m);){
+        int j;
+        for(j=0;j<m;j++)
+        if(pat[j]!=txt[i+j])
+        break;
+        
+        if(j==m)
+        cout<<i<<" ";
+        if(j==0){
+        i++;}
+        else{
+        i=(i+j);}
     }
 }
 int main(){
@@ -24,6 +34,10 @@ int main(){
     cin>>pat;
     int n=s.length();
     int n1=pat.length();
-    Naiv_Alg(s,n,pat,n1);
+    patSearchinng(s,n,pat,n1);
+    cout<<"Improve pattern searching Algorithm"<<endl;
+    Inprove_naive_pattern_searching(s,n,pat,n1);
     return 0;
 }
+
+
