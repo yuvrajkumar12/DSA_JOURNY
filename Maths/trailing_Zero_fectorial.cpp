@@ -7,6 +7,8 @@ int trailingZero(int n){
     }
     return res;
 }
+
+
 int main(){
     int n;
     cin>>n;
